@@ -1,0 +1,28 @@
+{
+  "name": "remote",
+  "version": "0.1.0",
+  "description": "A remote to control your PC through your phone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/index.js",
+    "dev": "nodemon build/index.js",
+    "typescript": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thorvaldemar/remote.git"
+  },
+  "author": "Thor Bilsby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thorvaldemar/remote/issues"
+  },
+  "homepage": "https://github.com/thorvaldemar/remote#readme",
+  "dependencies": {
+    "@types/node": "^18.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.5.2",
+    "ts-node": "^10.9.1"
+  }
+}
