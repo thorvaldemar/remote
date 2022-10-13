@@ -14,5 +14,21 @@ app.get('/app.js', function (req, res) { return res.sendFile("".concat(__dirname
 app.get('/style.css', function (req, res) { return res.sendFile("".concat(__dirname, "/frontend/style.css")); });
 app.post('/control/:key', function (req, res) {
     remote.press(req.params.key).catch(function (err) { return console.log(err); });
+    res.send();
+});
+app.post('/tab/start', function (req, res) {
+    remote.keyDown('alt').then(function () {
+        remote.press('tab').then(function () {
+            res.send();
+        }).catch(function (err) { return console.log(err); });
+    }).catch(function (err) { return console.log(err); });
+});
+app.post('/tab/stop', function (req, res) {
+    remote.keyUp('alt').then(function () {
+        res.send();
+    }).catch(function (err) { return console.log(err); });
+});
+app.post('/system/shutdown', function (req, res) {
+    remote.write('shutdown').catch(function (err) { return console.log(err); });
 });
 app.listen(80, function () { return console.log("Listening to *:80"); });

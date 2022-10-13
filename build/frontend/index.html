@@ -14,6 +14,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="top">
+        <div class="container">
+            <div class="row extras">
+                <div class="col">
+                    <i class="bi bi-power" id="power"></i>
+                </div>
+                <div class="col">
+                    <i class="bi bi-window-stack" id="tab"></i>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="center">
         <div class="container">
             <div class="row">
@@ -26,7 +38,6 @@
                 </div>
             </div>
             <div class="row extras">
-                <div class="col-2"></div>
                 <div class="col">
                     <i class="bi bi-skip-backward" id="backward"></i>
                 </div>
@@ -42,7 +53,22 @@
                 <div class="col">
                     <i class="bi bi-skip-forward" id="forward"></i>
                 </div>
-                <div class="col-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layer" style="display: none">
+        <div class="tab-controls">
+            <div class="row">
+                <div class="col"><i class="bi bi-caret-up" id="up"></i></div>
+            </div>
+            <div class="row">
+                <div class="col"><i class="bi bi-caret-left" id="left"></i></div>
+                <div class="col"><i class="bi bi-check2-circle" id="accept"></i></div>
+                <div class="col"><i class="bi bi-caret-right" id="right"></i></div>
+            </div>
+            <div class="row">
+                <div class="col"><i class="bi bi-caret-down" id="down"></i></div>
             </div>
         </div>
     </div>

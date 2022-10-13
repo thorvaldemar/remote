@@ -1,6 +1,7 @@
 import json
 import sys
 import time
+import os
 
 def ret(data = {}):
     print(json.dumps(data), end='')
@@ -34,13 +35,16 @@ while running:
 
     if len(args) == 2:
         if args[1] == 'stop': break
+        if args[1] == 'shutdown':
+            os.system("shutdown /s /t 1")
+            break
     
     elif len(args) == 3:
         try:
             if args[1] == 'keydown': pyautogui.keyDown(args[2])
             elif args[1] == 'keyup': pyautogui.keyUp(args[2])
             elif args[1] == 'press': pyautogui.press(args[2])
-            
+
             ret()
         except:
             ret_err(1, 'PyAutoGUIError', 'Something went wrong while using PyAutoGUI')
